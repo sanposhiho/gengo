@@ -197,6 +197,7 @@ func New$.type|public$(items ...$.type|raw$) $.type|public$ {
 func $.type|public$KeySet(theMap interface{}) $.type|public$ {
 	v := reflect.ValueOf(theMap)
 	ret := $.type|public${}
+	ret := make($.type|public$, len(v.MapKeys()))
 
 	for _, keyValue := range v.MapKeys() {
 		ret.Insert(keyValue.Interface().($.type|raw$))
